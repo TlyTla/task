@@ -90,7 +90,8 @@ void Database::PrintName() const
 {
 	for (int i = 0; i < people.size(); i++)
 	{
-		std::cout << "Имя:" << people.at(i)->GetName() << "\nФамилия:" << people.at(i)->GetSurname() << "\nНомер: " << people.at(i)->GetNumber()<< "\n\n";
+		std::string print = std::format("{} {}: {}", people.at(i)->GetName(), people.at(i)->GetSurname(), people.at(i)->GetNumber());
+		std::cout << print << std::endl;
 	}
 }
 
@@ -98,7 +99,8 @@ void Database::PrintSurname() const
 {
 	for (int i = 0; i < people.size(); i++)
 	{
-		std::cout << "Фамилия: " << people.at(i)->GetSurname() << "\nИмя:" << people.at(i)->GetName() << "\nНомер: " << people.at(i)->GetNumber() << "\n\n";
+		std:: string print = std::format("{} {}: {}", people.at(i)->GetSurname(), people.at(i)->GetName(), people.at(i)->GetNumber());
+		std::cout << print<< std:: endl;
 	}
 }
 
@@ -106,6 +108,7 @@ void Database::PrintNumber() const
 {
 	for (int i = 0; i < people.size(); i++)
 	{
-		std::cout << "Номер: " << people.at(i)->GetNumber() << "\nФамилия: " << people.at(i)->GetSurname() << "\nИмя:" << people.at(i)->GetName() << "\n\n";
+		std::string print = std::format("{}: {} {}", people.at(i)->GetNumber(), people.at(i)->GetSurname(), people.at(i)->GetName());
+		std::cout << print << std::endl;
 	}
 }
