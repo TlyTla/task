@@ -1,6 +1,5 @@
 #include "Database.h"
 
-
 Database::Database(std::string& txt)
 {
 	std::ifstream file;
@@ -14,15 +13,15 @@ Database::Database(std::string& txt)
 	else
 	{
 		std::string line;
-	
-		while (std::getline(file, line)) 
+
+		while (std::getline(file, line))
 		{
 			std::istringstream sstream(line);
 			std::string name, surname;
 			int number;
 
-			std::getline(sstream, surname, ' '); 
-			std::getline(sstream, name, ':'); 
+			std::getline(sstream, surname, ' ');
+			std::getline(sstream, name, ':');
 			sstream >> number;
 
 			Students* student = new Students();
