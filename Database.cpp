@@ -36,6 +36,14 @@ Database::Database(std::string& txt)
 	file.close();
 }
 
+Database::~Database()
+{
+	for (Students* student : people)
+	{
+		delete student;
+	}
+}
+
 void Database::SortName()
 {
 	for (int i = 0; i < people.size() - 1; i++)

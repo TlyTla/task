@@ -16,6 +16,7 @@ class Database final
 {
 public:
 	Database(std::string &txt);
+	~Database();
 
 	void SortName();
 	void SortSurname();
